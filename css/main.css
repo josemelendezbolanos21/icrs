@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Merriweather:900&display=swap');
+
+/* GLOBAL */
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+/* HOME CSS */
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.header header, .header aside {  
+  height: 100%;
+}
+
+.header header {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 125px;
+  text-align: left;
+}
+
+.header header h1, .header header p{
+  max-width: 75%;
+  margin-bottom: 32px;
+  color: rgb(17, 11, 11);
+}
+
+.header header h1 {
+  font-size: 26px;
+}
+
+aside img {
+  position: absolute;
+  height: 460px;
+  width: 560px;
+  z-index: 5;
+  top: 50%;
+  left: 0;
+  transform: translate(-35%, -35%) rotate(10deg);
+}
+
+.header aside {
+  width: 35%;
+  background-image: url('../assets/aside.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: top center;
+  background-position-x: 200%;
+  position: relative;
+}
+
+.aside-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, .85);
+}
+
+.btn-info{
+  background: rgb(17, 11, 11);
+  padding: 10px 16px;
+  border: none;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .65);
+  cursor: pointer;
+  width: 160px;
+}
+
+.btn-info a { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.btn-info a i {
+  font-size: 20px;
+}
+
+.nav {
+  position: fixed;
+  background: transparent;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 52px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  z-index: 999;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: none;
+  height: 60px;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  z-index: 999;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.menu:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+.menu-icon span {
+  height: 2px;
+  width: 22px;
+  background: black;
+  transition: all .3s ease-in-out;
+}
+
+.menu-icon .line-2 {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  height: 2px;
+}
+
+.menu-icon .line-1 {
+  width: 16px;
+}
+
+/* LINKS */
+.links-wrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 500;
+  display: none;
+}
+
+.links {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 115px;
+  z-index: 999;
+}
+
+a {
+  text-decoration: none;
+  color: #8A0000;
+}
+
+.logo a {
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  line-height: -5px;
+  font-size: 22px;
+}
+
+.links a {
+  font-size: 62px;
+  margin-bottom: 28px;
+  color: rgb(255, 255, 255);
+  font-family: 'Merriweather', sans-serif;
+  transform-origin: left center;
+  /* text-transform: uppercase; */
+}
+
+.links a:hover {
+  -webkit-text-stroke: .5px #fff;
+}
+
+.rows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  background: transparent;
+}
+
+.row {
+  height: 100%;
+  width: 25%;
+}
+
+.row:nth-child(1) { /* fallback for old browsers */
+  background-image: radial-gradient( circle 2200px at 1.6% 87.8%,  #8A0000 0%, rgba(138, 0, 0, .93) 100% );
+}
+
+.row:nth-child(2) { /* fallback for old browsers */
+  background-image: radial-gradient( circle 1900px at 1.6% 70.8%,  #8A0000 0%, rgba(138, 0, 0, .9) 96% );
+}
+
+.row:nth-child(3) { /* fallback for old browsers */
+  background-image: radial-gradient( circle 1750px at 1.6% 63.8%,  #8A0000 0%, rgba(138, 0, 0, .85) 93% );
+}
+
+.row:nth-child(4) { /* fallback for old browsers */
+  background-image: radial-gradient( circle 1750px at 1.6% 63.8%,  #8A0000 0%, rgba(138, 0, 0, .8) 89% );
+}
+
+/* INFO */
+
+.info {  
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 40px 125px;
+  text-align: center;
+}
+
+.schedule {
+  padding: 40px 0px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.schedule-card {
+  width: 33%;
+  margin-right: 24px;
+  color: #fff;
+  max-width: 300px;
+  background: rgb(17, 11, 11);
+  padding: 24px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+}
+
+.schedule-card:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.schedule i {
+  margin-right: 5px;
+}
+
+.card-title, .card-subtitle {
+  margin-bottom: 16px;
+}
+
+#map {
+  width: 100%;
+  height: 480px;
+}
+
+.info-title .text-stroke {
+  color: transparent!important;
+  -webkit-text-stroke: 1px rgb(17, 11, 11);
+}
+
+.info-title {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 76px;
+  color: rgb(17, 11, 11);
+}

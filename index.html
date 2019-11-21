@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <title>Iglesia de Cristo Rincon de Salas</title>
+</head>
+<body>
+  <div>
+    <div class="header" id="home">
+      <nav class="nav">
+        <button class="menu">           
+            <div class="menu-icon">
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+              <span class="line-3"></span>              
+            </div>
+            <p>MENU</p>
+        </button>
+        <!-- <div class="logo">          
+          <a href="#home">
+            <span>ICRS</span>
+          </a>
+        </div> -->
+        <div class="links-wrapper">
+          <div class="links">
+            <a href="#info">Informacion</a>
+            <a href="#contact">Contactenos</a>
+            <a href="#partner">Texas Church</a>
+            <a href="#activities">Actividades</a>
+          </div>
+          <div class="rows">              
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+          </div>
+        </div>
+      </nav>
+      <header>        
+        <h1 class="header-title">
+          Si andas en busqueda de un acercamiento con Dios, de una oracion o de unos oidos que te escuchen recuerda que
+          las puertas de nuestra congregacion en Rincon de Salas siempre estaran abiertas para ti.
+        </h1>
+        <p class="subtitle">
+          "Para esto Dios los llamó por nuestro evangelio, a fin de que tengan parte en la gloria de nuestro Señor
+          Jesucristo."
+          2 Tesalonicenses 2:14
+        </p>
+        <button class="btn-info">
+          <a href="#info">
+            <span>Ver mas</span>
+            <i class="fas fa-angle-right"></i>
+          </a>
+        </button>
+      </header>
+      <aside>
+        <img src="assets/bible.png" alt="bible" id="illustration"/>
+      </aside>
+    </div>  
+    <main>
+      <section class="info" id="info">
+        <h2 class="info-title"><span class="text-stroke">Actividades</span> Semanales</h2>
+        <div class="schedule">
+          <div class="schedule-card">
+            <div class="card-title">
+              <i class="far fa-calendar-alt"></i>
+              <span>Todos los domingos</span>
+            </div>
+            <div class="card-subtitle">
+                <i class="far fa-clock"></i>
+                <span>10:45 a.m</span>
+            </div>
+            <div>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Rincon de Salas Sur, frente a FANAL</span>
+            </div>
+          </div>
+          <div class="schedule-card">
+            <div class="card-title">
+              <i class="far fa-calendar-alt"></i>
+              <span>Todos los martes</span>
+            </div>
+            <div class="card-subtitle">
+                <i class="far fa-clock"></i>
+                <span> 7:00 p.m</span>
+            </div>
+            <div>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Rincon de Salas Sur, frente a FANAL</span>
+            </div>
+          </div>
+          <div class="schedule-card">
+            <div class="card-title">
+              <i class="far fa-calendar-alt"></i>
+              <span>Todos los jueves</span>
+            </div>
+            <div class="card-subtitle">
+                <i class="far fa-clock"></i>
+                <span>7:00 p.m</span>
+            </div>
+            <div>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Hogar de un miembro de la congregacion</span>
+            </div>
+          </div>
+        </div>
+        <div id="map"></div>
+      </section>
+      <section class="contact" id="contact">
+
+      </section>
+    </main>
+  </div>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  <script src="main.js"></script>
+</body>
+</html>
