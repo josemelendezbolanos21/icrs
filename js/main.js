@@ -14,7 +14,7 @@
 window.addEventListener('load', () => {
   // REMOVE PRELOADER
   const preloader = document.querySelector('.preloader');
-  preloader.classList.add('loaded');
+  // preloader.classList.add('loaded');
 
   // HEADER ELEMENTS
   const headerTitle = document.querySelector('.header-title');
@@ -202,7 +202,6 @@ window.addEventListener('load', () => {
     triggerHook: 0.3
   })
     .setClassToggle('#i3', 'show-i')
-    .addIndicators()
     .addTo(landingCtrl);
 
   const min3Tl = gsap.timeline();
@@ -222,7 +221,6 @@ window.addEventListener('load', () => {
     triggerHook: 0.3
   })
     .setClassToggle('#i4', 'show-i')
-    .addIndicators()
     .addTo(landingCtrl);
 
   const min4Tl = gsap.timeline();

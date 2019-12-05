@@ -379,7 +379,6 @@ a {
   color: rgb(255, 255, 255);
   font-family: 'Gentium Book Basic', serif;
   transform-origin: left center;
-  /* text-transform: uppercase; */
 }
 
 .links a:hover {
@@ -795,6 +794,8 @@ a {
   color: #fff;
   z-index: 999;
   pointer-events: all;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .preloader span {
@@ -850,7 +851,11 @@ footer {
   color: #f2f2f2;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+}
+
+footer svg {
+  margin-bottom: 16px;
 }
 
 footer div {
@@ -871,7 +876,7 @@ footer p:nth-child(1) {
   position: relative;
   padding-bottom: 10px;
   color: rgb(0, 102, 219);
-  margin-bottom: 8px;
+  margin-top: 4px;
 }
 
 .link-line {
@@ -892,4 +897,18 @@ footer p:nth-child(1) {
 
 .contact p {
   color: rgb(0, 102, 219);
+}
+
+@media only screen and (max-width: 992px) 
+{
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  footer div:nth-child(2) {
+    margin-top: 20px;
+  }
 }
